@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#0D0D0D] text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+}
+
+/* Chrome-specific fix for navbar visibility */
+@supports (-webkit-appearance: none) {
+
+  /* Prevent parent containers from clipping navbar elements */
+  #root {
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* Ensure navbar elements are always visible */
+  nav {
+    overflow: visible !important;
+    contain: none !important;
+  }
+
+  /* Force visibility for flex items on large screens */
+  @media (min-width: 1024px) {
+    .hidden.lg\:flex {
+      display: flex !important;
+    }
+  }
+
+  /* Force visibility for Connect Wallet button on medium+ screens */
+  @media (min-width: 768px) {
+    .hidden.md\:block {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+}
