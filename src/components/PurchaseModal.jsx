@@ -14,7 +14,7 @@ export default function PurchaseModal({ nft, onClose, onSuccess }) {
     const [purchaseResult, setPurchaseResult] = useState(null);
     const [userAddress, setUserAddress] = useState(null);
 
-    const API_URL = 'http://localhost:3001';
+    const API_URL = 'https://mars-backend-69p8.onrender.com';
 
     // Get price quote on mount
     useEffect(() => {
