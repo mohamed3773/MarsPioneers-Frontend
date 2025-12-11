@@ -12,7 +12,7 @@ export default function SimplePurchaseModal({ nft, onClose, onSuccess }) {
     const [walletAddress, setWalletAddress] = useState(null);
     const [price, setPrice] = useState(null);
 
-    const API_URL = 'http://localhost:3001';
+    const API_URL = 'https://mars-backend-69p8.onrender.com';
 
     // Get wallet address and price on mount
     useEffect(() => {
