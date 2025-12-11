@@ -24,7 +24,7 @@ export default function MultiChainPurchaseModal({ nft, onClose, onSuccess }) {
     const { switchChainAsync } = useSwitchChain();
     const { sendTransactionAsync } = useSendTransaction();
 
-    const API_URL = 'http://localhost:3001';
+    const API_URL = 'https://mars-backend-69p8.onrender.com';
 
     /**
      * Convert technical errors to user-friendly messages
